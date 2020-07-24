@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instagram</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body{
+			font-family: 'Roboto', sans-serif;
+		}
+		.main-div{
+			text-align: center;
+			margin: 0px 10%;
+		}
+		.main-img{
+			margin: 53px 0px;
+		}
+		.username{
+			width: 90%;
+			height: 100px;
+			border: 1px solid #C0C0C0;
+			font-size: 35px;
+			font-weight: lighter;
+			padding: 2px 25px;
+			margin: 10px;
+			border-radius: 10px;
+		}
+		.password{
+			width: 90%;
+			height: 100px;
+			border: 1px solid #C0C0C0;
+			font-size: 35px;
+			font-weight: lighter;
+			padding: 2px 25px;
+			margin: 10px;
+			border-radius: 10px;
+		}
+		::placeholder {
+		    color: #A9A9A9;
+		    font-size: 30px;
+		}
+		.login{
+			padding: 18px 43%;
+			border-radius: 10px;
+			font-size: 36px;
+			color: white;
+			margin: 20px 0px;
+			background-color: #468fea;
+			border: none;
+			margin-bottom: 50px;
+		}
+		.forgot{
+			font-size: 30px;
+			color: #246BCE;
+			font-weight: bold;
+		}
+		.signup-div{
+			font-size: 36px;
+			margin-top: 100px;
+		}
+		.signup a{
+			color: #89CFF0;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		.platforms{
+			display: flex;
+			justify-content: space-around;
+			margin-top: 40px;
+		}
+		.app{
+			margin-top: 100px;
+		}
+		.app span{
+			font-size: 38px;
+		}
+		.info{
+			margin: 40px 20px;
+			display: none;
+		}
+		.know{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="main-div">
+		<div class="main-img">
+			<img src="instagram.png" width="485px" height="100%">
+		</div>
+		<div class="form-div">
+			<div class="main-form">
+				<input class="username" type="text" placeholder="Phone number, username, or email" aria-label="fndsnj"><br>
+				<input class="password" type="password" placeholder="password"><br>
+				<button class="login" onclick="FunPart()">Log in</button>
+			</div>
+			<div class="forgot">Forgot password?</div>
+		</div>
+		<div class="signup-div">
+			<div class="signup">Don't have an account? <a href="#">Sign up</a></div>
+		</div>
+		<div class="app">
+			<span>Get the app.</span>
+			<div class="platforms">
+				<img src="app_store.png" width="325" height="100%">
+				<img src="play_store.png" width="325" height="100%">
+			</div>
+		</div>
+	</div>
+	<div class="info">
+		<h1>You just got tricked by me...</h1>
+		<h3>This is Fake Instagram Login Page but Not Bad.</h3>
+		<br>
+		<strong>Username = <span class="username_here"></span></strong>
+		<br>
+		<strong>Password = <span class="password_here"></span></strong>
+		<br><br>
+		<strong class="know">Only you can see your username and password, I can't</strong>
+		<br><br>
+		<p>Tip: If someone else(your enemy) wants to know your password they can store this data(username, password) into there database and use it.</p>
+		<br>
+		<strong>Don't worry we didn't connect any database to this page.</strong>
+		<br><br>
+		<strong>If send your replay/feedback/comment on this at shreyasghansawant@gmail.com</strong>
+	</div>
+</body>
+<script type="text/javascript">
+	var FunPart = function(){
+		var username = document.getElementsByClassName('username')[0];
+		var password = document.getElementsByClassName('password')[0];
+		document.getElementsByClassName('main-div')[0].style.display = "none";
+		document.getElementsByClassName('info')[0].style.display = "block";
+		document.getElementsByClassName('username_here')[0].innerHTML = username.value;
+		document.getElementsByClassName('password_here')[0].innerHTML = password.value;
+	}
+</script>
+</html>
